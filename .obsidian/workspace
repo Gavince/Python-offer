@@ -1,0 +1,93 @@
+{
+  "main": {
+    "id": "badaaa26e4e0969d",
+    "type": "split",
+    "children": [
+      {
+        "id": "8a37a00474022f44",
+        "type": "leaf",
+        "state": {
+          "type": "empty",
+          "state": {}
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "79fdc6abcb32348c",
+    "type": "split",
+    "children": [
+      {
+        "id": "b9f35faafe4a0152",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "a6d868a53b507c61",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "2d9bc7f95512b933",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "e37ea87f821c9f6b",
+    "type": "split",
+    "children": [
+      {
+        "id": "0cd9d15d89bfca8b",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "620f1461bae5e377",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "active": "8a37a00474022f44",
+  "lastOpenFiles": [
+    "未命名.md",
+    "总结/Python剑指offer打卡-22.md",
+    "总结/Python剑指offer打卡-4.md",
+    "总结/Python剑指offer打卡-7.md",
+    "总结/Python剑指offer打卡-1.md"
+  ]
+}

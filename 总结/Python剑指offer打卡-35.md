@@ -94,6 +94,8 @@
 
 ## 用Rand7()实现Rand10()
 
+神奇的事情发生了，奇怪的知识增加了
+
 题目类型：数学推导
 
 题目难度：:star2::star2::star2:
@@ -112,6 +114,12 @@
   第 2 步： 判断选出的元素是否属于前 40 个，如果不是需要返回第 1 步重新选取元素
   第 3 步： 若该属于前 40 个，但是直接输出的话超出 [1,10] 的范围，该怎么处理呢？
   
+  规律：
+  已知 rand_N() 可以等概率的生成[1, N]范围的随机数
+  那么：
+  (rand_X() - 1) × Y + rand_Y() ==> 可以等概率的生成[1, X * Y]范围的随机数
+  即实现了 rand_XY()
+  
   时间复杂度：O(1)
   空间复杂度：O(1)
   
@@ -121,23 +129,18 @@
 - 代码
 
   ```python
-  class Solution:
-      def findDuplicate(self, nums: List[int]) -> int:
   
-          if not nums: return 0
-          slow, fast = 0, 0
-          slow, fast = nums[slow], nums[nums[fast]]
-          # 判断是否有环
-          while fast != slow:
-              slow = nums[slow]
-              fast = nums[nums[fast]]
-          # 寻找环的入口结点
-          fast = 0
-          while fast != slow:
-              fast = nums[fast]
-              slow = nums[slow]
-          # 返回重复数字
-          return fast
+  class Solution:
+      def rand10(self):
+          """
+          :rtype: int
+          """
+          while True:
+              col = rand7()
+              row = rand7()
+              index = (col - 1)*7 + row
+              if index <= 40:
+                  return (index - 1)%10 + 1
   ```
 
 ## 堆排序
