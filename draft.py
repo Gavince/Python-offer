@@ -1,12 +1,22 @@
-def bubleSort(nums):
-    """冒泡排序"""
-    n = len(nums)
-    for i in range(n - 1):
-        for j in range(n - i - 1):
-            if nums[j] > nums[j + 1]:
-                nums[j], nums[j + 1] = nums[j + 1], nums[j]
-    return nums
+class Solution:
+
+    def generateParenthsis(self, n):
+
+        res = []
+
+        def dfs(paths, left, right):
+            if left > n or right > left: return
+            if len(paths) == n * 2:
+                res.append(paths)
+                return
+
+            dfs(paths + "(", left + 1, right)
+            dfs(paths + ")", left, right + 1)
+
+        dfs("", 0, 0)
+        return res
 
 
-print("s")
-print(bubleSort([2, 1, 3, 0]))
+if __name__ == "__main__":
+    obj = Solution()
+    print(obj.generateParenthsis(2))

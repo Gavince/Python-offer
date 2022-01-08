@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 # @Time    : 2022/1/6 上午10:22
 # @Author  : gavin
-# @FileName: 181.跳跃游戏.py
+# @FileName: 181.跳跃游戏I.py
 # @Software: PyCharm
 # @Blog    ：https://blog.csdn.net/weixin_35154281
 """

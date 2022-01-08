@@ -28,12 +28,14 @@ class Solution:
         res = []
 
         def dfs(paths, left, right):
+            # 左括号少于括号对数，
             if left > n or right > left: return
-            if len(paths) == n*2:
+            if len(paths) == n * 2:
                 res.append(paths)
                 return
             dfs(paths + "(", left + 1, right)
             dfs(paths + ")", left, right + 1)
+
         dfs("", 0, 0)
 
         return res
