@@ -22,6 +22,7 @@ class Solution:
 
         dight, res = 1, 0
         cur, low, high = n % 10, 0, n // 10
+        # 001, high=0, cur=0, low=1
         while high != 0 or cur != 0:
             if cur == 0:
                 res += high * dight
