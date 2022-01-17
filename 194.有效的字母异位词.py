@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 # @Time    : 2022/1/15 上午11:22
 # @Author  : gavin
-# @FileName: 194.py
+# @FileName: 194.有效的字母异位词.py
 # @Software: PyCharm
 # @Blog    ：https://blog.csdn.net/weixin_35154281
 """

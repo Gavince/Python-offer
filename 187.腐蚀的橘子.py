@@ -15,6 +15,8 @@
 
 解题方法：
 BFS
+提前终止的问题：没有腐烂的橘子和没有新鲜的橘子
+1
 时间复杂度：O(mn)
 空间复杂度：O(mn)
 
@@ -23,27 +25,29 @@ BFS
 
 
 class Solution:
-    def orangesRotting(self, grid) -> int:
+    def orangesRotting(self, grid: List[List[int]]) -> int:
 
         m, n = len(grid), len(grid[0])
-        # 标记腐烂橘子的位置
-        time = 0
+        # 栈，按时间进行存储
+        #
         deque = []
+        time = 0
+        # 标记腐蚀橘子
         for i in range(m):
             for j in range(n):
                 if grid[i][j] == 2:
                     deque.append((i, j, time))
-
-        # 开始腐烂新鲜橘子
+        # 开始腐蚀
         while deque:
             i, j, time = deque.pop(0)
-            for di, dj in [(1, 0), (-1, 0), (0, 1), (0, -1)]:
+            for di, dj in [(0, 1), (1, 0), (-1, 0), (0, -1)]:
                 if 0 <= i + di < m and 0 <= j + dj < n and grid[i + di][j + dj] == 1:
                     grid[i + di][j + dj] = 2
                     deque.append((i + di, j + dj, time + 1))
-        # 无法腐蚀的橘子
+        # 检查是否还有新鲜的橘子
         for row in grid:
-            if 1 in row: return -1
+            if 1 in row:
+                return -1
 
         return time
 
