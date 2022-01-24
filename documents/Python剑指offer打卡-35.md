@@ -45,7 +45,7 @@
           return " ".join(res)
   ```
 
-## 字符串相乘.
+## 字符串相乘
 
 题目类型：字符串
 
@@ -198,7 +198,7 @@
           return nums
   ```
 
-## 寻找重复数
+## 最短无序连续子数组
 
 题目类型：双指针
 
@@ -222,10 +222,6 @@
 
 - 代码
 
-  图解算法
-
-  ![](/home/gavin/Code/Python/剑指offer/总结/imgs/166.png)
-
   ```python
   class Solution:
       def findUnsortedSubarray(self, nums: List[int]) -> int:
@@ -247,5 +243,3 @@
   
           return 0 if right == -1 else right - left + 1
   ```
-
-## 

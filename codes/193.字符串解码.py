@@ -34,6 +34,7 @@ class Solution:
                 # 重置
                 res, multi = "", 0
             elif c == "]":
+                # 3[a4[bcd]]
                 last_res, cur_multi = stack.pop()
                 res = last_res + cur_multi*res
             elif "0" <= c <= "9":

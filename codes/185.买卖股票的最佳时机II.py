@@ -13,7 +13,9 @@
 
 解题方法：
 遍历，等价于每天都进行交易
-时间复杂度：O(N)
+连续正向收益下：prices[n] - prices[1] = (prices[n] - prices[n - 1]) + ....(prices[2] - princes[1])
+负向收益不累计：prices[i] - prices[j] < 0
+时间复杂度：O(n)
 空间复杂度：O(1)
 
 原题链接：https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-ii/

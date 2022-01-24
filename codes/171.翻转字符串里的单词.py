@@ -12,6 +12,10 @@
 可以在前面、后面或者单词间包含多余的空格。翻转后单词间应当仅用一个空格
 分隔。翻转后的字符串中不应包含额外的空格。
 
+示例：
+输入：s = "the sky is blue"
+输出："blue is sky the"
+
 解题方法：
 双指针
 时间复杂度：O(N)
@@ -24,14 +28,17 @@
 class Solution:
     def reverseWords(self, s: str) -> str:
 
+        # 去除字符左右两边的空白
         s = s.strip()
-        i = j = len(s) - 1
+        i, j = len(s) - 1, len(s) - 1
         res = []
         while i >= 0:
-            # 取单词的左边界点
-            while i >= 0 and s[i] != " ": i -= 1
-            res.append(s[i + 1:j + 1])
-            # 跳过空白的部分
-            while s[i] == " ": i -= 1
+            # 有效字符
+            while i >= 0 and s[i] != " ":
+                i -= 1
+            res.append(s[i + 1: j + 1])
+            #　消除字符间的空白
+            while s[i] == " ":
+                i -= 1
             j = i
         return " ".join(res)

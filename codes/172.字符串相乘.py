@@ -34,4 +34,5 @@ class Solution:
                 ansArr[i - 1] += ansArr[i] // 10
                 ansArr[i] %= 10
         index  = 1 if ansArr[0] == 0 else 0
+
         return "".join( str(i) for i in ansArr[index:])

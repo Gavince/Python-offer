@@ -22,33 +22,34 @@ BFS
 
 原题链接：https://leetcode-cn.com/problems/rotting-oranges/
 """
+from typing import List
 
 
 class Solution:
     def orangesRotting(self, grid: List[List[int]]) -> int:
 
+        if not grid: return -1
         m, n = len(grid), len(grid[0])
-        # 栈，按时间进行存储
-        #
         deque = []
-        time = 0
-        # 标记腐蚀橘子
+        time = 0  # 标识腐蚀的时间
         for i in range(m):
             for j in range(n):
                 if grid[i][j] == 2:
-                    deque.append((i, j, time))
-        # 开始腐蚀
+                    # 待腐蚀的橘子队列
+                    deque.append([i, j, time])
+        # BFS腐蚀橘子
         while deque:
             i, j, time = deque.pop(0)
             for di, dj in [(0, 1), (1, 0), (-1, 0), (0, -1)]:
-                if 0 <= i + di < m and 0 <= j + dj < n and grid[i + di][j + dj] == 1:
-                    grid[i + di][j + dj] = 2
-                    deque.append((i + di, j + dj, time + 1))
-        # 检查是否还有新鲜的橘子
+                x = di + i
+                y = dj + j
+                if 0 <= x < m and 0 <= y < n and grid[x][y] == 1:
+                    grid[x][y] = 2
+                    deque.append([x, y, time + 1])
+        # 判断无法腐蚀的情况
         for row in grid:
             if 1 in row:
                 return -1
-
         return time
 
 

@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 # @Time    : 2021/12/22 下午7:38
 # @Author  : gavin
-# @FileName: 最短无序连续子数组.py
+# @FileName: 175.最短无序连续子数组.py
 # @Software: PyCharm
 # @Blog    ：https://blog.csdn.net/weixin_35154281
 """
@@ -11,7 +11,11 @@
 最短子数组，并输出它的长度。
 
 解题方法：
-双指针
+左右双指针:从左到右循环，记录最大值为 max，若 nums[i] < max, 则
+表明位置 i 需要调整, 循环结束，记录需要调整的最大位置 i 为 high;
+同理，从右到左循环，记录最小值为 min, 若 nums[i] > min, 则表
+明位置 i 需要调整，循环结束，记录需要调整的最小位置 i 为 low.
+
 时间复杂度：O(N)
 空间复杂度：O(1)
 

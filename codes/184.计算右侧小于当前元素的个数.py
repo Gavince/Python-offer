@@ -19,11 +19,15 @@ counts[i] 的值是nums[i] 右侧小于nums[i] 的元素的数量。
 1 的右侧有 0 个更小的元素
 
 解题方法：
+二分法构造有序序列
+5 4 1
+插入数字 4 --> 6 5 4 1  len(arr) -idx = 3
 时间复杂度：O(Nlog(N))
 空间复杂度：O(N)
 
 原题链接：https://leetcode-cn.com/problems/count-of-smaller-numbers-after-self/
 """
+
 
 class Solution:
     def countSmaller(self, nums):
@@ -32,6 +36,7 @@ class Solution:
         sort_stack = []
 
         def binary_search(arr, target):
+            # 从大到小进行插入
 
             low, high = 0, len(arr) - 1
             while low <= high:
