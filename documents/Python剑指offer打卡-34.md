@@ -299,30 +299,36 @@
   的 正方形 子矩阵的个数。
   ```
 
-  
+  状态转移分析：
 
   <img src="./imgs/169-2.png" style="zoom:50%;" />
 
+  状态解释：
+  
+  <img src="./imgs/169-3.png" style="zoom:100%;" />
+  
   ```python
   class Solution:
       def countSquares(self, matrix: List[List[int]]) -> int:
-          
-          m, n =  len(matrix), len(matrix[0])
-          dp = [[0]*n for _ in range(m)]
-          ans = 0
   
+          # 初始变量
+          ans = 0
+          m, n = len(matrix), len(matrix[0])
+          # 定义dp
+          # 表示到(i, j)所能组成的最大正方形的个数
+          dp = [[0]*n for _ in range(m)]
+          # 转态转移
           for i in range(m):
               for j in range(n):
-                  if i == 0 or j == 0:
-                      dp[i][j] = matrix[i][j]
-                  elif matrix[i][j] == 0:
-                      dp[i][j] = 0
-                  else:
-                      dp[i][j] = min(dp[i][j - 1], dp[i - 1][j], dp[i - 1][j - 1]) + 1
-                  ans += dp[i][j]
-          
+                  if matrix[i][j] == 1:
+                      if i == 0 or j ==0:
+                          dp[i][j] = matrix[i][j]
+                      else:
+                          dp[i][j] = min(dp[i - 1][j], dp[i][j - 1], dp[i - 1][j - 1]) + 1
+                      ans += dp[i][j]
+          # 返回值
           return ans
   ```
-
+  
   
 

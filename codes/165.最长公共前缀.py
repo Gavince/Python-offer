@@ -17,8 +17,11 @@
 解释：输入不存在公共前缀。
 解题方法：
 纵向比较
+需要比较每一个字符中相等的部分，并注意最小字符串的问题
 时间复杂度：O(MN)
 空间复杂度：O(1)
+
+原题链接： https://leetcode-cn.com/problems/longest-common-prefix/
 """
 
 

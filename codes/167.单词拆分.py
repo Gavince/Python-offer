@@ -8,7 +8,8 @@
 问题描述：
     给你一个字符串 s 和一个字符串列表 wordDict 作为字典，判定s 是否可以由空
 格拆分为一个或多个在字典中出现的单词。说明：拆分时可以重复使用字典中的单词。
-实例：
+
+示例：
 输入: s = "leetcode", wordDict = ["leet", "code"]
 输出: true
 解释: 返回 true 因为 "leetcode" 可以被拆分成 "leet code"
@@ -20,21 +21,21 @@
 
 原题链接：https://leetcode-cn.com/problems/word-break/
 """
-from typing import List
 
 
 class Solution:
     def wordBreak(self, s: str, wordDict: List[str]) -> bool:
 
+        # 定义dp
         n = len(s)
-        # 定义dp问题
-        dp = [False] * (n + 1)
-        # 初始化dp
-        dp[0] = True
-        # 状态转移
+        dp = [False]*(n + 1)
+        # 赋予初值
+        dp[0] = [True]
+        # 转态转移
         for i in range(n):
             for j in range(i + 1, n + 1):
                 if dp[i] and s[i:j] in wordDict:
+                    #　下一个状态的起始点标识
                     dp[j] = True
         # 返回值
-        return dp[-1]
+        return dp[n]

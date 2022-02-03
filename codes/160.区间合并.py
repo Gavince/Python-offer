@@ -11,6 +11,8 @@
 
 解题方法：
 排序合并
+
+原题链接：https://leetcode-cn.com/problems/merge-intervals/
 """
 from typing import List
 

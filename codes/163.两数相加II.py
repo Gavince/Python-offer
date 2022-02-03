@@ -18,6 +18,8 @@
 链表头插法
 时间复杂度：O(max(M, N))
 空间复杂度：O(M + N)
+
+原题链接：https://leetcode-cn.com/problems/add-two-numbers-ii/
 """
 
 class ListNode:

@@ -24,7 +24,7 @@ class Solution:
             return "0"
         m, n = len(num1), len(num2)
         ansArr = [0]*(m + n)
-        # 模拟运算
+        # 模拟运算 高位在前，低位在后
         for i in range(m  - 1, -1, -1):
             x = int(num1[i])
             for j in range(n - 1, -1, -1):
