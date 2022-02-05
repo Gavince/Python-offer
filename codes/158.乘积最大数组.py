@@ -12,14 +12,19 @@
 实例：
 输入: [2,3,-2,4]
 输出: 6
-pre_max: 2 cur_min: 2
-cur_max: 6 cur_min: 3
-cur_max: -2 cur_min: -12
-cur_max: 4 cur_min: -48
 
 解题方法：
+    需要注意正负号的变化，特别是最小负数值的保存，在遇见下一个负数值时，会变成当前足最大的
+数值（负负得正）。
+pre_max: 2 pre_min: 2
+cur_max: 6 cur_min: 3
+cur_max:-2 cur_min: -12
+cur_max: 4 cur_min: -48
+
 时间复杂度：O(N)
 空间复杂度：O(1)
+
+原题链接：https://leetcode-cn.com/problems/maximum-product-subarray/
 """
 from typing import List
 
