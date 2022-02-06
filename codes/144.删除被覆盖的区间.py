@@ -12,8 +12,12 @@
 
 解题方法：
 排序 + 遍历
+排序遵循：左端从小到大，右端从大到小
+
 时间复杂度：O(NlogN)，其中N是区间的个数。
 空间复杂度：O(logN)，为排序需要的空间。
+
+原题链接：https://leetcode-cn.com/problems/remove-covered-intervals/
 """
 
 
