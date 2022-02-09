@@ -12,6 +12,8 @@
 
 解决方案：
 简单的层序遍历
+
+原题链接：https://leetcode-cn.com/problems/cong-shang-dao-xia-da-yin-er-cha-shu-lcof/
 """
 from typing import List
 
