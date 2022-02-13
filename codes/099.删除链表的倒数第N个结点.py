@@ -17,6 +17,8 @@
 双指针
 时间复杂度:O(N) former指针实现一趟扫描
 空间复杂度:O(1)
+
+原题链接：https://leetcode-cn.com/problems/SLwz0R/
 """
 
 

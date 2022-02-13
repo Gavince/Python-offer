@@ -174,7 +174,7 @@
   示例：
   输入: [7,5,6,4]
   输出: 5
-  
+  [5, 7] [4]
   解题方法：
   归并排序
   ```
@@ -212,6 +212,7 @@
                   result.append(left[i])
                   i += 1
               else:
+                  # [1 2 5], [3, 4]
                   result.append(right[j])
                   j += 1
                   self.cnt += (len(left) - i)
@@ -424,13 +425,13 @@
 
   二分法查找适用于数据量较大时，但是数据需要<font color ="red">先排好顺序</font>。主要思想是：（设查找的数组区间为array[low, high]）
 
-  ![](/home/gavin/Python/剑指offer/总结/imgs/二分查找.png)
+  ![](./imgs/二分查找.png)
 
   二分查找演示代码
 
   注意:二分查找边界值为:==low <= high==
 
-  ![](/home/gavin/Python/剑指offer/总结/imgs/二分查找边界.png)
+  ![](./imgs/二分查找边界.png)
 
   ```python
   class Solution:
@@ -547,7 +548,7 @@
 
   快慢指针寻找中点图解：
 
-  ![](/home/gavin/Python/剑指offer/总结/imgs/93-fast.png)
+  ![](./imgs/93-fast.png)
 
   
 
@@ -616,11 +617,11 @@
 
   静态图演示：
 
-  ![](/home/gavin/Python/剑指offer/总结/imgs/93.png)
+  ![](./imgs/93.png)
 
   动图演示：
 
-  ![](/home/gavin/Python/剑指offer/总结/imgs/93归并.gif)
+  ![](./imgs/93归并.gif)
 
   
 
@@ -687,7 +688,7 @@
 
   算法图解：
 
-  <img src="/home/gavin/Python/剑指offer/总结/imgs/12.png"  />
+  <img src="./imgs/12.png"  />
 
   ```python
   class ListNode:

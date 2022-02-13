@@ -15,6 +15,9 @@
 方法2：双指针(双指针相差k，先前指针走完时，正好后指针到指定结点)
  former + after = after + former
  K + M = Ｍ + K
+ 时间复杂度:O(N)
+ 空间复杂度：O(1)
+ 原题链接：https://leetcode-cn.com/problems/lian-biao-zhong-dao-shu-di-kge-jie-dian-lcof/
 """
 
 

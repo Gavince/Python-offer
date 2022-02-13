@@ -15,7 +15,6 @@
 空间复杂度：O(1)
 
 原题链接：https://leetcode-cn.com/problems/find-first-and-last-position-of-element-in-sorted-array/
-相似题目：排序数组中两个数字之和
 """
 
 

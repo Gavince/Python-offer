@@ -96,10 +96,8 @@
                   if total >= target:
                       ans = min(ans, j - i + 1)
           return ans
-      # 双指针法
-      def minSubArrayLen(self, target: int, nums: List[int]) -> int:
   ```
-
+  
   双指针法
 
   ```python
@@ -158,7 +156,7 @@
 
   图解算法
 
-  ![](/home/gavin/Python/剑指offer/总结/imgs/109.png)
+  ![](./imgs/109.png)
 
   ```python
   from typing import List
@@ -244,7 +242,7 @@
 
   图解
 
-  ![](/home/gavin/Python/剑指offer/总结/imgs/110.png)
+  ![](./imgs/110.png)
 
   ```python
   class Solution:
@@ -313,11 +311,11 @@
 
 - 图解快慢指针取中点
 
-  ![](/home/gavin/Python/剑指offer/总结/imgs/97.png)
+  ![](./imgs/97.png)
 
 - 链表翻转之后比较图解
 
-  ![](/home/gavin/Python/剑指offer/总结/imgs/97-Page-2.png)
+  ![](./imgs/97-Page-2.png)
 
 - 代码（[解题思路](https://leetcode-cn.com/problems/palindrome-linked-list/solution/kuai-man-zhi-zhen-lian-biao-ni-xu-by-airesearcherj/)）
 
@@ -398,7 +396,7 @@
 
   图解快慢指针相遇(存在环)
 
-  ![](/home/gavin/Python/剑指offer/总结/imgs/98.png)
+  ![](./imgs/98.png)
 
   ```python
   class ListNode:
@@ -509,7 +507,7 @@
 
   图解快慢指针变化
 
-  ![](/home/gavin/Python/剑指offer/总结/imgs/99.png)
+  ![](./imgs/99.png)
 
   ```python
   class ListNode:

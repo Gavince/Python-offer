@@ -4,6 +4,8 @@
 # @FileName: 134.二叉树的最小深度.py
 # @Software: PyCharm
 # @Blog    ：https://blog.csdn.net/weixin_35154281
+
+
 """
 问题描述：
     给定一个二叉树，找出其最小深度。最小深度是从根节点到最近叶子节点的最短
@@ -11,6 +13,8 @@
 
 解题方法：
 递归和非递归
+
+原题链接：https://leetcode-cn.com/problems/minimum-depth-of-binary-tree/
 """
 import collections
 

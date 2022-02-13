@@ -14,6 +14,12 @@
 
 解题方法：
 二分法排序
+
+时间复杂度：O(log(N))
+空间复杂度：O(1)
+
+原题链接：
+https://leetcode-cn.com/problems/zai-pai-xu-shu-zu-zhong-cha-zhao-shu-zi-lcof/
 """
 
 

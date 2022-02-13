@@ -6,14 +6,17 @@
 # @Blog    ：https://blog.csdn.net/weixin_35154281
 """
 问题描述：
-
     给定一个未排序的整数数组 nums ，找出数字连续的最长序列（不要求序列元素在原
 数组中连续）的长度。请你设计并实现时间复杂度为O(n) 的算法解决此问题。
 
 解题方法：
 哈希表
+注意不要求序列元素在数组中连续
+
 时间复杂度：O(N)
 空间复杂度：O(N)
+
+原题链接：https://leetcode-cn.com/problems/longest-consecutive-sequence/
 """
 from typing import List
 

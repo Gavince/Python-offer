@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 # @Time    : 2020/7/28 下午2:42
 # @Author  : gavin
-# @FileName: 1. 跳台阶问题.py
+# @FileName: 1.跳台阶问题.py
 # @Software: PyCharm
 # @Blog    ：https://blog.csdn.net/weixin_35154281
 
@@ -9,13 +9,14 @@
 问题描述1：一只青蛙一次可以跳上1级台阶，也可以跳上2级。
 求该青蛙跳上一个n级的台阶总共有多少种跳法（先后次序不同算不同的结果)
 解决方案：
-当n=0 1
+当
+n=0 1
 n=1 1
 n=2 2
 n=3 3
 n=4 5
 ．．．．．．
-所以，符合斐波那契数列f(n) = f(n-1) + f(n-2)
+所以，符合斐波那契数列f(n) = f(n-1) + f(n-2) st:n >= 2
 
 问题描述2：一只青蛙一次可以跳上1级台阶，也可以跳上2级,更可以一次跳上n级台阶
 求该青蛙跳上一个n级的台阶总共有多少种跳法（先后次序不同算不同的结果
@@ -26,6 +27,8 @@ n = 2 2
 n = 3 4
 ．．．．．．
 所以，f(n) = 2f(n-1)
+
+原题链接：https://leetcode-cn.com/problems/qing-wa-tiao-tai-jie-wen-ti-lcof/
 """
 
 

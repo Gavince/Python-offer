@@ -6,22 +6,25 @@
 # @Blog    ：https://blog.csdn.net/weixin_35154281
 """
 问题描述：
-    给定一个含有n个正整数的数组和一个正整数 target 。找出该数组中满足其和 ≥ target
-的长度最小的连续子数组[numsl, numsl+1, ..., numsr-1, numsr] ，并返回其长度。
-如果不存在符合条件的子数组，返回 0 。
+    给定一个含有n个正整数的数组和一个正整数 target 。找出该数组中
+满足其和 ≥ target的长度最小的连续子数组[numsl, numsl+1, ...,
+numsr-1, numsr]，并返回其长度。如果不存在符合条件的子数组，返回0。
 
 解题方法：
+需要注意给出数组没有表明为有序数组，因此处理时，按照无序数组进行处理
 (1)暴力法
 时间复杂度：O(N*N)
 空间复杂度：O(1)
 
 (2)双指针法
-注意以下情况的返回值
+注意以下情况的返回值，加和之后值相等，但不存在等于目标结果的子数组
 nums: [1, 1, 1, 1, 1, 1, 1, 1]
 target: 11
 ans: 0
 时间复杂度：O(N)
 空间复杂度：O(1)
+
+原题链接：https://leetcode-cn.com/problems/minimum-size-subarray-sum/
 """
 from typing import List
 
@@ -40,7 +43,7 @@ class Solution:
                 total += nums[j]
                 if total >= target:
                     ans = min(ans, j - i + 1)
-        return ans
+        return 0 if ans == len(nums) - 1 else ans
     # 双指针法
     def minSubArrayLen(self, target: int, nums: List[int]) -> int:
 
