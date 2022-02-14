@@ -18,7 +18,6 @@
 
 原题链接：https://leetcode-cn.com/problems/longest-consecutive-sequence/
 """
-from typing import List
 
 
 class Solution:

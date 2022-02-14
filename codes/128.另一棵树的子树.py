@@ -13,6 +13,8 @@ ee 的一棵子树包括 tree 的某个节点和这个节点的所有后代节�
 
 解题方法：
 DFS
+
+原题链接：https://leetcode-cn.com/problems/subtree-of-another-tree/
 """
 
 

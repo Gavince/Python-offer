@@ -18,3 +18,27 @@ target的唯一组合数少于 150 个。
 空间复杂度：O(m + n)
 
 """
+
+
+class Solution:
+    def combinationSum(self, candidates: List[int], target: int) -> List[List[int]]:
+
+        def dfs(candidates, begin, size, res, path, target):
+
+            if target < 0:
+                return
+
+            if target == 0:
+                res.append(path)
+
+            for index in range(begin, size):
+                dfs(candidates, index, size, res, path + [candidates[index]], target - candidates[index])
+
+        size = len(candidates)
+        if size < 0:
+            return []
+
+        res, path = [], []
+        dfs(candidates, 0, size, res, path, target)
+
+        return res

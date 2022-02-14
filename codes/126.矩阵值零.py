@@ -4,6 +4,8 @@
 # @FileName: 126..py
 # @Software: PyCharm
 # @Blog    ：https://blog.csdn.net/weixin_35154281
+
+
 """
 问题描述：
 
@@ -17,15 +19,21 @@
 解题方法：
 方法一：
 设置行列标记，行标记或者列标记为零时，元素置为零。
-时间复杂度：O(mn)
-空间复杂度：O(m + n)
+时间复杂度：O(MN)
+空间复杂度：O(M + N)
 
+方法二：
+只存储有效的行列标记
+时间复杂度：O(MN)
+空间复杂度：O(1)
+
+原题链接：https://leetcode-cn.com/problems/set-matrix-zeroes/
 """
-from typing import List
 
 
-class Solution0:
-    def setZeroes(self, matrix: List[List[int]]) -> None:
+class Solution:
+
+    def setZeroesfor1(self, matrix: List[List[int]]) -> None:
         """
         Do not return anything, modify matrix in-place instead.
         """
@@ -46,8 +54,7 @@ class Solution0:
                 if rows[i] or cols[j]:
                     matrix[i][j] = 0
 
-class Solution1:
-    def setZeroes(self, matrix: List[List[int]]) -> None:
+    def setZeroesfor2(self, matrix: List[List[int]]) -> None:
         """
         Do not return anything, modify matrix in-place instead.
         """
@@ -60,7 +67,7 @@ class Solution1:
                 if matrix[i][j] == 0:
                     row_zeros.add(i)
                     col_zeros.add(j)
-        # 输出
+
         for i in range(m):
             for j in range(n):
                 if i in row_zeros or j in col_zeros:
