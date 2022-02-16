@@ -15,14 +15,9 @@
 
 时间复杂度：O(N)
 空间复杂度：O(1)
+
+原题链接：https://leetcode-cn.com/problems/reorder-list/
 """
-
-
-# Definition for singly-linked list.
-class ListNode:
-    def __init__(self, val=0, next=None):
-        self.val = val
-        self.next = next
 
 
 class Solution:

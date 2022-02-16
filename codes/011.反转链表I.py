@@ -1,18 +1,23 @@
 # -*- coding: utf-8 -*-
 # @Time    : 2020/8/6 下午9:42
 # @Author  : gavin
-# @FileName: 11.链表翻转.py
+# @FileName: 11.反转链表I.py
 # @Software: PyCharm
 # @Blog    ：https://blog.csdn.net/weixin_35154281
 
 
 """
 问题描述：
-输入一个链表，反转链表后，输出新链表的表头
+    输入一个链表，反转链表后，输出新链表的表头
 
 解决方案：
 1.迭代法
+时间复杂度:O(N)
+空间复杂度：O(1)
+
 2.递归法
+
+原题链接：https://leetcode-cn.com/problems/fan-zhuan-lian-biao-lcof/
 """
 
 

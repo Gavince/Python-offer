@@ -2,7 +2,7 @@
 
 [toc]
 
-## 反转链表（<font color = red>重点</font>）
+## 反转链表I（<font color = red>重点</font>）
 
 题目类型：链表
 
@@ -26,7 +26,7 @@
 
   算法图解：
 
-  <img src="/home/gavin/Python/剑指offer/总结/imgs/链表翻转.gif" style="zoom: 67%;" />
+  <img src="./imgs/链表翻转.gif" style="zoom: 67%;" />
 
   ```python
   class Solution:
@@ -48,7 +48,7 @@
 
   算法图解（**注意每次返回的都是同一个节点**）：
 
-  ![](/home/gavin/Python/剑指offer/总结/imgs/11_递归.png)
+  ![](./imgs/11_递归.png)
 
   ```python
   class Solution:
@@ -91,7 +91,7 @@
 
   算法图解：
 
-  ![](/home/gavin/Python/剑指offer/总结/imgs/111.png)
+  ![](./imgs/111.png)
 
   ```python
   class Solution:
@@ -145,6 +145,8 @@
   
   解题方法：
   仿照单链表的翻转
+  1 2 3 4 5 6 k = 4
+  4 3 2 1 
   ```
 
 - 代码
@@ -195,7 +197,7 @@
 
   快慢指针寻找中间节点（回文链表）
 
-  ![](/home/gavin/Python/剑指offer/总结/imgs/97.png)
+  ![](./imgs/97.png)
 
   ```python
   # Definition for singly-linked list.
@@ -271,11 +273,11 @@
 
 - 图解快慢指针取中点
 
-  ![](/home/gavin/Python/剑指offer/总结/imgs/97.png)
+  ![](./imgs/97.png)
 
 - 链表翻转之后比较图解
 
-  ![](/home/gavin/Python/剑指offer/总结/imgs/97-Page-2.png)
+  ![](./imgs/97-Page-2.png)
 
 - 代码（[解题思路](https://leetcode-cn.com/problems/palindrome-linked-list/solution/kuai-man-zhi-zhen-lian-biao-ni-xu-by-airesearcherj/)）
 
@@ -339,7 +341,7 @@
 
 - 代码（[解题思路](https://leetcode-cn.com/problems/cong-wei-dao-tou-da-yin-lian-biao-lcof/solution/mian-shi-ti-06-cong-wei-dao-tou-da-yin-lian-biao-d/)）
 
-  <img src="/home/gavin/Python/剑指offer/总结/imgs/tailtohead.png" style="zoom: 67%;" />
+  <img src="./imgs/tailtohead.png" style="zoom: 67%;" />
 
   ```python
   class Sulution:

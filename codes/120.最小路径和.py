@@ -11,6 +11,11 @@
 
 解题方法:
 该题目与礼物的最大值相似,采用动态规划解决
+
+时间复杂度：O(MN)
+空间复杂度：O(1)
+
+原题链接：https://leetcode-cn.com/problems/0i0mDW/
 """
 from typing import List
 
