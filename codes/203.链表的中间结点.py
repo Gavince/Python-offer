@@ -18,7 +18,7 @@ ans.val = 3, ans.next.val = 4, ans.next.next.val = 5, 以
 及 ans.next.next.next = NULL.
 
 解题方法：
-快慢指针ggit
+快慢指针
 时间复杂度：O(N)
 空间复杂度：O(1)
 
