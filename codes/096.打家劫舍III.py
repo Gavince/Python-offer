@@ -14,22 +14,17 @@
 
 解题方法：
 树型动态规划(后序遍历)
-1. 转态定义： dp = [val1, val2] 下标0表示为不偷， 下标1表示为偷
-2. 状态转移： 如果当前节点能被偷，则有val2 = cur.val + left[0] + right[0]
-否则如果当前节点不能偷，则有val1 = max(left[0], left[1]) + max(right[0], right[0])
-3. 初始状态： dp = [0, 0]
-4. 返回值: max(dp[0], dp[1])
-时时间复杂度：O(n)
-空间复杂度：O()
+1.转态定义：dp = [val1, val2] 下标0表示为不偷， 下标1表示为偷(可以自己定义)
+2.状态转移：如果当前节点能被偷，则有val2 = cur.val + left[0] + right[0]否则如果
+当前节点不能偷，则有val1 = max(left[0], left[1]) + max(right[0], right[0])
+3.初始状态：dp = [0, 0]
+4.返回值:max(dp[0], dp[1])
+
+时间复杂度：O(N)
+空间复杂度：O(N)
+
+原题链接：https://leetcode-cn.com/problems/house-robber-iii/
 """
-
-
-class TreeNode:
-
-    def __init__(self, val):
-        self.left = None
-        self.right = None
-        self.val = val
 
 
 class Solution:

@@ -12,8 +12,9 @@
 
 解题方法：
 DFS和BFS
+
+原题链接：https://leetcode-cn.com/problems/ZL6zAn/
 """
-from typing import List
 
 
 class Solution:

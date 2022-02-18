@@ -19,6 +19,8 @@
 （2）栈(维持一个递减栈)
 时间复杂度:O(N)
 空间复杂度:O(N)
+
+原题链接：
 """
 from typing import List
 

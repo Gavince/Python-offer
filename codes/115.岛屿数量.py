@@ -12,6 +12,8 @@
 
 解题方法：
 DFS和BFS
+
+原题链接：https://leetcode-cn.com/problems/number-of-islands/
 """
 from typing import List
 

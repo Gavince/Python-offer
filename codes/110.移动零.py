@@ -29,7 +29,7 @@ fast 始终指向不为零的数组位置
 时间复杂度：O(N)
 空间复杂度：O(1)
 
-原题链接：
+原题链接：https://leetcode-cn.com/problems/move-zeroes/
 """
 
 

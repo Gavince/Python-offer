@@ -13,6 +13,8 @@
 快速排序
 时间复杂度：O(NlogN)
 空间复杂度：O(1)
+
+原题链接：https://leetcode-cn.com/problems/xx4gT2/
 """
 
 import random

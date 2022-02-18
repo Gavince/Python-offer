@@ -14,11 +14,13 @@
 (1)暴力法
 时间复杂度：O(N)
 空间复杂度：O(N)
+
 (2)原地置换（索引与值对齐原则）
 时间复杂度：O(N)
 空间复杂度：O(1)
+
+原题链接：https://leetcode-cn.com/problems/find-all-numbers-disappeared-in-an-array/
 """
-from typing import List
 
 
 class Solution:
@@ -36,10 +38,9 @@ class Solution:
         """原地置换"""
         n = len(nums)
         for num in nums:
-            # 是否存在已创建的索引
+            # 索引对其，缺失索引值不能得到更新
             x = (num - 1) % n
             nums[x] += n
-        print(nums)
         ret = [i + 1 for i, num in enumerate(nums) if num <= n]
 
         return ret
@@ -47,4 +48,4 @@ class Solution:
 
 if __name__ == "__main__":
     obj = Solution()
-    print(obj.findDisappearedNumbers1([1, 1]))
+    print(obj.findDisappearedNumbers2([1, 1, 3]))

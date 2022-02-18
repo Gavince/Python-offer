@@ -12,10 +12,13 @@
 
 解题方法：
 逆向双指针
+特殊情况:当num1数组为零时，即[0] 0 [1] 1，需要执行nums1[:] = nums2[:]
+
 时间复杂度：O(m + n)
 空间复杂度:O(1)
+
+原题连接：https://leetcode-cn.com/problems/merge-sorted-array/
 """
-from typing import List
 
 
 class Solution:

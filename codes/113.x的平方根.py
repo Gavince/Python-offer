@@ -21,6 +21,8 @@
 (3)牛顿迭代法(可以求得精确解)
 时间复杂度：O(1)
 空间复杂度：O(1)
+
+原题链接：https://leetcode-cn.com/problems/sqrtx/
 """
 
 import math

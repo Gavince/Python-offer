@@ -21,8 +21,12 @@
 
 解题方法：
 深度优先遍历
+需要注意向上递归返回的状态，即只能从左子树和右子树以便进行返回
+
 时间复杂度：O(N)
 空间复杂度：O(height)
+
+原题链接：https://leetcode-cn.com/problems/diameter-of-binary-tree/
 """
 
 

@@ -18,9 +18,18 @@
 时间复杂度：O(N^2)
 空间复杂度：O(1)
 (2)前缀表达式
-pre_A + k = pre_B
+0 1 2 3 1 2
+k = 3
+nums_times[0] = 1 cur_nums = 0
+nums_times[1] = 1 cur_nums = 1
+nums_times[2] = 1 cur_nums = 3
+cur_nums - k in nums_times
+
+pre_A（前缀和） + k = pre_B
 时间复杂度：O(N)
 空间复杂度：O(N)
+
+原题链接：https://leetcode-cn.com/problems/QTMn0o/
 """
 from collections import defaultdict
 

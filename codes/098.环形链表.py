@@ -19,6 +19,7 @@
 (1)哈希表
 时间复杂度：O(n)　
 空间复杂度：O(n)
+
 (2)快慢指针
 时间复杂度：O(n)　
 空间复杂度：O(1)
@@ -28,15 +29,9 @@
 """
 
 
-class ListNode:
-    def __init__(self, x):
-        self.val = x
-        self.next = None
-
-
 class Solution:
 
-    def hasCycle1(self, head):
+    def hasCycle1(self, head: ListNode) -> bool:
 
         seen = set()
         while head:
