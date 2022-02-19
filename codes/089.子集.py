@@ -7,7 +7,7 @@
 """
 问题描述：
     给你一个整数数组 nums ，数组中的元素 互不相同 。返回该数组所有
-可能的子集（幂集）。解集不能包含重复的子集。你可以按 任意顺序 返回解集。
+可能的子集（幂集）。解集不能包含重复的子集。你可以按任意顺序返回解集。
 
 实例：
 输入：nums = [1,2,3]
@@ -20,11 +20,14 @@
 
 注意：
 空集是任何形式的子集。
+
+原题链接：https://leetcode-cn.com/problems/TVdhkn/
 """
 from typing import List
 
 
 class Solution:
+
     def subsets(self, nums: List[int]) -> List[List[int]]:
         """迭代法"""
 

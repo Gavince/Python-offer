@@ -22,17 +22,20 @@
 优化的动态规划:
 时间复杂度：O(N)
 空间复杂度：O(1)
+
+原题链接：https://leetcode-cn.com/problems/maximum-subarray/
 """
-from typing import List
 
 
-class Solution1:
+class Solution:
     
     def maxSubArray(self, nums: List[int]) -> int:
+        """动态规划"""
 
         if not nums: return 0
-        # 定义状态赋初值
+        # 定义状态
         dp = [0]*len(nums)
+        # 初始值
         dp[0] = nums[0]
         # 状态转移
         for i in range(1, len(nums)):
@@ -40,13 +43,11 @@ class Solution1:
         # 返回值
         return max(dp)
 
-class Solution2:
+    def MaxArray(self, nums):
+        """优化的动态规划"""
 
-        def MaxArray(self, nums):
-            """最大子数组之和"""
+        if not nums: return 0
+        for i in range(1, len(nums)):
+            nums[i] += max(nums[i - 1], 0)
 
-            if not nums: return 0
-            for i in range(1, len(nums)):
-                nums[i] += max(nums[i - 1], 0)
-
-            return max(nums)
+        return max(nums)

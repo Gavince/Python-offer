@@ -36,6 +36,8 @@
     题目要求此题为覆盖（一个树的覆盖到另一个树上），因此，需要直接在原有二叉
 树上进行修改，而另一种情况，需要创建一棵新的二叉树来保存合并后的结果，两种题型
 需要注意审题。
+
+原题链接：https://leetcode-cn.com/problems/merge-two-binary-trees/
 """
 
 
@@ -50,7 +52,7 @@ class TreeNode:
 class Solution:
 
     def mergeTrees1(self, t1, t2):
-        """合并两个二叉树"""
+        """合并二叉树（需要生成新树）"""
 
         def dfs(t1, t2):
             if not (t1 and t2):
@@ -59,13 +61,12 @@ class Solution:
             merge = TreeNode(t1.val + t2.val)
             merge.left = dfs(t1.left, t2.left)
             merge.right = dfs(t1.right, t2.right)
-
             return merge
 
         return dfs(t1, t2)
 
     def mergeTrees2(self, root1: TreeNode, root2: TreeNode) -> TreeNode:
-        """不需要创建一个新树"""
+        """不需要创建一颗新树"""
 
         def dfs(root1, root2):
             if not (root1 and root2):
@@ -75,7 +76,6 @@ class Solution:
             root1.val = root1.val + root2.val
             root1.left = dfs(root1.left, root2.left)
             root1.right = dfs(root1.right, root2.right)
-
             return root1
 
         return dfs(root1, root2)

@@ -4,6 +4,8 @@
 # @FileName: 92.全排列.py
 # @Software: PyCharm
 # @Blog    ：https://blog.csdn.net/weixin_35154281
+
+
 """
 问题描述：
     给定一个不含重复数字的数组 nums ，返回其 所有可能的全排列 。你可以
@@ -26,7 +28,7 @@ from typing import List
 class Solution:
 
     def permute(self, nums):
-        """数组的全排列"""
+        """不含重复数字数组的全排列"""
 
         res = []
 
@@ -45,6 +47,7 @@ class Solution:
         return res
 
     def permuteUnique(self, nums: List[int]) -> List[List[int]]:
+        """包含重复数字数组的全排列"""
 
         res = []
 

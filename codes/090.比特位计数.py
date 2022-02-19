@@ -18,6 +18,8 @@
 
 与操作
 x &=(x - 1)能够实现每一次消除最后一位1
+
+原题链接：https://leetcode-cn.com/problems/counting-bits/
 """
 
 

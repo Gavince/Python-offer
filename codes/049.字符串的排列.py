@@ -6,8 +6,8 @@
 # @Blog    ：https://blog.csdn.net/weixin_35154281
 """
 问题描述：
-输入一个字符串，打印出该字符串中字符的所有排列。
-你可以以任意顺序返回这个字符串数组，但里面不能有重复元素。
+    输入一个字符串，打印出该字符串中字符的所有排列。你可以以任意顺序返回这个字符
+串数组，但里面不能有重复元素。
 
 实例：
 输入：s = "abc"
@@ -15,8 +15,10 @@
 
 解题方法：
 回朔法
-"""
+注意放回数组里面不能包含有重复元素，需要对其进行去重
 
+原题链接：https://leetcode-cn.com/problems/zi-fu-chuan-de-pai-lie-lcof/
+"""
 from typing import List
 
 
@@ -46,3 +48,5 @@ class Solution:
 if __name__ == "__main__":
     obj = Solution()
     print(obj.permutation("abc"))
+    # 验证是否去除重复元素
+    print(obj.permutation("aab"))
