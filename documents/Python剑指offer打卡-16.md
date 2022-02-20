@@ -63,29 +63,28 @@
   
   ```python
   class Solution:
-      def LIS(self , arr ):
-          # write code here
-          n = len(arr)
-          if n < 2:
-              return n
-          # 设定初始状态
-          dp = [1]*n
-          # 状态转移
-          for i in range(n):
+  
+      def lengthOfLIS(self, nums: List[int]) -> int:
+  
+          # 动态规划
+          if not nums: return 0
+          # 定义dp,并设置初始值
+          dp = [1] * len(nums)
+          # 遍历转态
+          for i in range(len(nums)):
               for j in range(i):
-                  if arr[i] > arr[j]:
+                  if nums[j] < nums[i]:
+                      # 更新状态
                       dp[i] = max(dp[i], dp[j] + 1)
-           # 获取序列
-          m = max(dp)
-          index = dp.index(m)
-          res = [0]*m
-          m -= 1
-          res[m] = arr[index]
-          for i in range(index, -1, -1):
-              if arr[i] < arr[index] and dp[i] == dp[index] - 1:
-                  m -= 1
-                  res[m] = arr[i]
-                  index = i
+  
+          # 输出最长子序列中的任意一个子序列
+          max_index = dp.index(max(dp))
+          res = [nums[max_index]]
+          for i in range(max_index, -1, -1):
+              if nums[i] < nums[max_index] and dp[i] == dp[max_index] - 1:
+                  res.append(nums[i])
+                  max_index = i
+          # 返回值
           return res
   ```
   
@@ -106,6 +105,34 @@
   6,插入6， [1,3,4,5,6]
   
   7.插入2， [1,2, 4,5,6]
+  
+  二分计算示例：
+  
+  step1:
+  
+  l, r = 0, 4
+  
+  mid = 2
+  
+  step2:
+  
+  r = 2, l = 0
+  
+  mid = 1
+  
+  step3:
+  
+  r = 1, l = 0
+  
+  mid = 0
+  
+  step4:
+  
+  l = 1, r = 0
+  
+  l < r: break
+  
+  cell[l] = nums
   
   ```python
   class Solution:

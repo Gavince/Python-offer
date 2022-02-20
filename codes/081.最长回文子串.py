@@ -1,12 +1,12 @@
 # -*- coding: utf-8 -*-
 # @Time    : 2021/5/24 下午2:14
 # @Author  : gavin
-# @FileName: 81.zui.py
+# @FileName: 81.最长回文子串.py
 # @Software: PyCharm
 # @Blog    ：https://blog.csdn.net/weixin_35154281
 """
 问题描述：
-给你一个字符串 s，找到 s 中最长的回文子串。
+    给你一个字符串 s，找到 s 中最长的回文子串。
 
 字符串的回文：
 	对于一个子串而言，如果它是回文串，并且长度大于 2，那么将它首尾的
@@ -26,8 +26,11 @@
 (2)状态转移：d[i][j] = dp[i + 1][j - 1]，子问题是否为回文子串；
 (3)初始状态：dp[i][i] = True 表示只有一个字符时为回文子串；
 (4)返回值：最长的回文子串长度。
+
 时间复杂度O(n^2)
 空间复杂度O(n^2)
+
+原题链接：https://leetcode-cn.com/problems/longest-palindromic-substring/
 """
 
 

@@ -13,12 +13,17 @@
 两种情况下滑动窗口的移动：
 （1）[abcdef]a  ----> [bcdefa]
 （2）[bdefa]a  ----> [a]
+
 时间复杂度：O(N)
 空间复杂度：O(N) 使用集合临时存储了最长字符串，极端情况下需要存储N
+
+原题链接：https://leetcode-cn.com/problems/longest-substring-without-repeating-characters/
 """
 
 
 class Solution:
+
+
     def lengthOfLongestSubstring(self, s: str) -> int:
 
         if not s: return 0

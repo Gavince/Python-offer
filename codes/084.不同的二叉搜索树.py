@@ -14,14 +14,18 @@
 动态规划(四步走原则)
 (1)定义转态：dp[i]表示连续的i个数，所有可能的BST组合个数；
 (2)状态转移：dp[i] += dp[j]*dp[i - j - 1]  2 <= i <= n, 2 <=  j <=  i - 1；
-eg: dp[2] = dp[1] * dp[0] + dp[0] * dp[1]
+eg:
+dp[0] = 1, dp[1] = 1
+dp[2] = dp[1] * dp[0] + dp[0] * dp[1]
+dp[3] = dp[2]*dp[0] + dp[1]*dp[1] + dp[0]*dp[2]
+
 (3)初始状态：dp[0] = 1, dp[1] = 1 表示无节点和只有一个结点时, BST个数为1 ；
 (4)返回值：dp[n]连续n个结点的BST组合个数。
 
 时间复杂度：O(N^2)
 空间复杂度：O(N)
 
-原题链接：
+原题链接：https://leetcode-cn.com/problems/unique-binary-search-trees/
 """
 
 

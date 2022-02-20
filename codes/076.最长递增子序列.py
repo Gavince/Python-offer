@@ -18,21 +18,41 @@
 解题方法：
 （１）动态规划四步走原则
 (1)转态定义：dp[i]表示到当前结点i所表示的子序列的长度
-(2)转态转移：dp[i] = max(dp[i], dp[j] + 1)，表示为i之前最大的递增子序列
-(3)初始值：dp = [1]*len(nums)
+(2)转态转移：dp[i] = max(dp[i], dp[j] + 1)，表示为i之前最大的递增子序列　
+st. j属于 [0, i - 1]
+(3)初始值：dp = [1]*len(nums),自己本身可以作为长度为１的最长递增子序列
 (4)返回值：max(dp)
 时间复杂度：O(N^2)
 空间复杂度：O(N)  dp状态的存储
+进阶：需要输出任意最长路劲的长度
 
 (2)二分法
 时间复杂度：O(NlogN)
 空间复杂度：O(1)
+
+原题链接：https://leetcode-cn.com/problems/longest-increasing-subsequence/
 """
 from typing import List
 
 
 class Solution:
-    def lengthOfLIS(self, nums: List[int]) -> int:
+
+    def lengthOfLISforDP(self, nums: List[int]) -> int:
+
+        # 动态规划
+        if not nums: return 0
+        # 定义dp,并设置初始值
+        dp = [1] * len(nums)
+        # 遍历转态
+        for i in range(len(nums)):
+            for j in range(i):
+                if nums[j] < nums[i]:
+                    # 更新状态
+                    dp[i] = max(dp[i], dp[j] + 1)
+        # 返回值
+        return max(dp)
+
+    def lengthOfLISPathforDP(self, nums: List[int]) -> List[int]:
 
         # 动态规划
         if not nums: return 0
@@ -53,9 +73,28 @@ class Solution:
                 res.append(nums[i])
                 max_index = i
         # 返回值
-        return res
+        return res[::-1]
+
+    def lengthOfLISforBinary(self, nums: List[int]) -> int:
+
+        n = len(nums)
+        if n < 2: return n
+        cell = [nums[0]]
+        for num in nums[1:]:
+            if num > cell[-1]:
+                cell.append(num)
+            l, r = 0, len(cell) - 1
+            while l < r:
+                mid = (l + r) // 2
+                if cell[mid] < num:
+                    l = mid + 1
+                else:
+                    r = mid
+            cell[l] = num
+
+        return len(cell)
 
 
 if __name__ == "__main__":
     obj = Solution()
-    print(obj.lengthOfLIS([10, 9, 2, 5, 3, 7, 101, 18]))
+    print(obj.lengthOfLISPathforDP([10, 9, 2, 5, 3, 7, 101, 18]))

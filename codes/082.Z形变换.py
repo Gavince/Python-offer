@@ -1,12 +1,13 @@
 # -*- coding: utf-8 -*-
 # @Time    : 2021/5/24 下午2:34
 # @Author  : gavin
-# @FileName: 82.Z形遍历.py
+# @FileName: 82.Z形变换.py
 # @Software: PyCharm
 # @Blog    ：https://blog.csdn.net/weixin_35154281
 """
 问题描述：
-将一个给定字符串 s 根据给定的行数 numRows ，以从上往下、从左到右进行 Z 字形排列。
+    将一个给定字符串s根据给定的行数numRows，以从上往下、从左到右进行Z字
+形排列。
 
 实例：
 输入：s = "PAYPALISHIRING", numRows = 4
@@ -21,6 +22,8 @@ P     I
 设置flag，使得转换遇见头尾进行转换
 时间复杂度：O(n)
 空间复杂度：O(n)
+
+原题链接：
 """
 
 
