@@ -13,6 +13,11 @@
 实例：
 输入：root = [1,2,5,3,4,null,6]
 输出：[1,null,2,null,3,null,4,null,5,null,6]
+
+时间复杂度：O()
+空间复杂度：O()
+
+原题链接：https://leetcode-cn.com/problems/flatten-binary-tree-to-linked-list/
 """
 
 

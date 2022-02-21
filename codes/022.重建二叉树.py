@@ -10,8 +10,15 @@
 中序遍历的结果中都不含重复的数字。例如输入前序遍历序列{1,2,4,7,3,5,6,8}和
 中序遍历序列{4,7,2,1,5,3,8,6}，则重建二叉树并返回。
 
+
+示例：
+Input: preorder = [3,9,20,15,7], inorder = [9,3,15,20,7]
+Output: [3,9,20,null,null,15,7]
+
 解决方案:
 递归
+
+原题链接：https://leetcode-cn.com/problems/zhong-jian-er-cha-shu-lcof/
 """
 
 
