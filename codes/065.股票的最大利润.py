@@ -20,12 +20,21 @@
 (1)暴力法
 时间复杂度:O(N^2)
 空间复杂度:O(1)
+
 (2)一次遍历
+优化动态规划，不保留中间状态的值
 时间复杂度:O(N)
 空间复杂度:O(1)
+
 (3)动态规划
+1.定义转态：dp[i] 到时间结点i的最大利润
+2.初始化转态：dp = [0]*n
+3.状态转移：dp[i] = max(dp[i - 1], dp[i] - min_cost)
+4.返回值:dp[-1]
 时间复杂度:O(N)
 空间复杂度:O(N)
+
+原题链接：https://leetcode-cn.com/problems/gu-piao-de-zui-da-li-run-lcof/
 """
 from typing import List
 

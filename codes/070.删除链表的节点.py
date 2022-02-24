@@ -6,19 +6,16 @@
 # @Blog    ：https://blog.csdn.net/weixin_35154281
 """
 问题描述：
-给定单向链表的头指针和一个要删除的节点的值，定义一个函数删除该节点。
+    给定单向链表的头指针和一个要删除的节点的值，定义一个函数删除该节点。
 返回删除后的链表的头节点。
+解题方法：
+单链表的遍历
 
 时间复杂度：o(N)
 空间复杂度：O(1)
+
+原题链接：https://leetcode-cn.com/problems/shan-chu-lian-biao-de-jie-dian-lcof/
 """
-
-
-class ListNode:
-    def __init__(self, x):
-        self.val = x
-        self.next = None
-
 
 class Solution:
 

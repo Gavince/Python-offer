@@ -14,7 +14,9 @@
 输出: [1,2,3,4,5,6,7,8,9
 
 解题方法：
+DFS
 
+原题链接：https://leetcode-cn.com/problems/da-yin-cong-1dao-zui-da-de-nwei-shu-lcof/
 """
 
 

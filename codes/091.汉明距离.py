@@ -3,9 +3,7 @@
 # @Author  : gavin
 # @FileName: 91.汉明距离.py
 # @Software: PyCharm
-# @Blog    ：https://blog.csdn.net/weixin_35154281
-
-
+# @Blog    ：https://blog.csdn.net/weixin_35154281gf
 """
 问题描述：
     两个整数之间的 汉明距离 指的是这两个数字对应二进制位不同的位置的数目。
