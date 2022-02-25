@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 # @Time    : 2021/5/3 上午9:24
 # @Author  : gavin
-# @FileName: 65.股票的最大利润.py
+# @FileName: 65.股票的最大利润I.py
 # @Software: PyCharm
 # @Blog    ：https://blog.csdn.net/weixin_35154281
 """
@@ -72,7 +72,6 @@ class Solution:
         # 定义dp和初始状态
         dp = [0] * n
         min_cost = prices[0]
-
         for i in range(1, n):
             min_cost = min(min_cost, prices[i])
             # 状态转移

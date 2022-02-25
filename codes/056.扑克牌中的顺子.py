@@ -6,7 +6,7 @@
 # @Blog    ：https://blog.csdn.net/weixin_35154281
 """
 问题描述：
-从扑克牌中随机抽5张牌，判断是不是一个顺子，即这5张牌是不是连续的。2～10为数字本身
+    从扑克牌中随机抽5张牌，判断是不是一个顺子，即这5张牌是不是连续的。2～10为数字本身
 ，A为1，J为11，Q为12，K为13，而大、小王为 0 ，可以看成任意数字。A 不能视为 14。
 
 解题方法：
@@ -15,8 +15,11 @@ max - min < 5
 
 注意：
 1. 不是一副扑克牌，大小王不止一张，即也有可能抽到五张大小，组成任意的
+时间复杂度：O(N)
+空间复杂度：O(N)
+
+原题链接：https://leetcode-cn.com/problems/bu-ke-pai-zhong-de-shun-zi-lcof/submissions/
 """
-from typing import List
 
 
 class Solution:
