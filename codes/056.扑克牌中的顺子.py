@@ -18,7 +18,7 @@ max - min < 5
 时间复杂度：O(N)
 空间复杂度：O(N)
 
-原题链接：https://leetcode-cn.com/problems/bu-ke-pai-zhong-de-shun-zi-lcof/submissions/
+原题链接：https://leetcode-cn.com/problems/bu-ke-pai-zhong-de-shun-zi-lcof/
 """
 
 

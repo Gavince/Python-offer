@@ -20,6 +20,11 @@
     当 s < targets 时： 向右移动右边界 j = j + 1，并更新元素和 s；
     当 s = targets 时： 记录连续整数序列，并向右移动左边界 i = i + 1，并更新元素和 s；
 3. 返回值： 返回结果列表 res ；
+
+时间复杂度：O(N)
+空间复杂度：O(1)
+
+原题链接：https://leetcode-cn.com/problems/he-wei-sde-lian-xu-zheng-shu-xu-lie-lcof/
 """
 
 
