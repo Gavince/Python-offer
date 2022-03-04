@@ -14,9 +14,17 @@
 解题方法:
 方法一：
 集合
+
 方法二：
 原地交换：索引与值的对应关系（一对多）
+
+解题方法：
+时间复杂度：O(N)
+空间复杂度：O(N)
+
+原题链接：https://leetcode-cn.com/problems/shu-zu-zhong-zhong-fu-de-shu-zi-lcof/
 """
+from typing import Tuple, Any
 
 
 class Solution:
@@ -31,7 +39,7 @@ class Solution:
 
         return -1
 
-    def findRepeatNumber_1(self, nums: [int]) -> int:
+    def findRepeatNumber_1(self, nums: [int]) -> Tuple[Any, int]:
         """原地交换：索引与值的对应关系"""
         i = 0
         while i < len(nums):

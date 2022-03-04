@@ -25,6 +25,8 @@ list(zip(*ma))[::-1]
 
 方法2:
 边界条件
+时间复杂度：O(MN)
+空间复杂度：O(1)
 
 原题链接：https://leetcode-cn.com/problems/shun-shi-zhen-da-yin-ju-zhen-lcof/
 """
@@ -33,7 +35,7 @@ from typing import List
 
 class Solution:
 
-    def spiralOrder(self, matirx: List[List[int]]) -> List[int]:
+    def spiralOrderforZip(self, matirx: List[List[int]]) -> List[int]:
 
         res = []
         while matirx:
@@ -43,7 +45,7 @@ class Solution:
 
         return res
 
-    def spiralOrder(self, matrix: List[List[int]]) -> List[int]:
+    def spiralOrderforBond(self, matrix: List[List[int]]) -> List[int]:
 
         if not matrix: return []
         res = []
