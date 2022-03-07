@@ -29,7 +29,7 @@
 (3)动态规划
 1.定义转态：dp[i] 到时间结点i的最大利润
 2.初始化转态：dp = [0]*n
-3.状态转移：dp[i] = max(dp[i - 1], dp[i] - min_cost)
+3.状态转移：dp[i] = max(dp[i - 1], prices[i] - min_cost)
 4.返回值:dp[-1]
 时间复杂度:O(N)
 空间复杂度:O(N)
