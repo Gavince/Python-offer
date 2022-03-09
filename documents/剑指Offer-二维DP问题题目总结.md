@@ -320,7 +320,7 @@
 
   算法图解
 
-  <img src="/home/gavin/Python/剑指offer/总结/imgs/123.png" style="zoom: 80%;" />
+  <img src="./imgs/123.png" style="zoom: 80%;" />
 
   ```python
   class Solution:
@@ -360,7 +360,7 @@
 
 - 算法图解
 
-  <img src="/home/gavin/Python/剑指offer/总结/imgs/123_2.png" style="zoom:80%;" />
+  <img src="./imgs/123_2.png" style="zoom:80%;" />
 
 - ```python
   class Solution:

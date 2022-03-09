@@ -207,7 +207,7 @@
 
     图解:窗口内无重复数值
 
-    ![](/home/gavin/Python/剑指offer/总结/imgs/80.png)
+    ![](./imgs/80.png)
 
     
 

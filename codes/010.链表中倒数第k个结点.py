@@ -4,8 +4,6 @@
 # @FileName: 10.链表中倒数第k个结点.py
 # @Software: PyCharm
 # @Blog    ：https://blog.csdn.net/weixin_35154281
-
-
 """
 问题描述：
 输入一个链表，输出该链表中倒数第k个结点
