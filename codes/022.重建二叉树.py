@@ -17,6 +17,11 @@ Output: [3,9,20,null,null,15,7]
 
 解决方案:
 递归
+前序遍历性质： 节点按照 [ 根节点 | 左子树 | 右子树 ] 排序。
+中序遍历性质： 节点按照 [ 左子树 | 根节点 | 右子树 ] 排序。
+
+时间复杂度:O(N)
+空间复杂度：O(N)
 
 原题链接：https://leetcode-cn.com/problems/zhong-jian-er-cha-shu-lcof/
 """

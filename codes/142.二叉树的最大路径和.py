@@ -11,7 +11,7 @@
 节点，且不一定经过根节点。路径和是路径中各节点值的总和。给你一个二叉树的
 根节点 root，返回其 最大路径和 。
 
-解题方法：
+解题方法：https://leetcode-cn.com/problems/binary-tree-maximum-path-sum/
 DFS
 1.
  /

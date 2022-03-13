@@ -11,7 +11,7 @@
 操作给定的二叉树，将其变换为源二叉树的镜像
 
 解决方案：
-
+递归
 源二叉树：
 　　８
 　６　10
@@ -20,6 +20,12 @@
      8
   10  6
 11  9  7  5
+
+时间复杂度:O(N)
+空间复杂度：O(N)
+
+
+原题链接:https://leetcode-cn.com/problems/er-cha-shu-de-jing-xiang-lcof/
 """
 
 
