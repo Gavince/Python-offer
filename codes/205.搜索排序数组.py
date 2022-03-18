@@ -38,13 +38,13 @@ class Solution:
             # 1 2 2 1 1 target:2
             if arr[mid] == target:
                 right = mid
-            # 1 2 3 4 5
+            # 1 2 3 4 5 target:2
             elif arr[0] < arr[mid]:
                 if arr[0] <= target < arr[mid]:
                     right = mid - 1
                 else:
                     left = mid + 1
-            # 4 5 1 2 3
+            # 4 5 1 2 3 target:2
             elif arr[0] > arr[mid]:
                 if arr[mid] < target <= arr[-1]:
                     left = mid + 1

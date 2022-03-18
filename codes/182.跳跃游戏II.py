@@ -33,6 +33,7 @@ class Solution:
             if max_pos >= i:
                 # 寻找最大起跳点
                 max_pos = max(max_pos, nums[i] + i)
+                # 记录一次完整跳跃
                 if end == i:
                     step += 1
                     end = max_pos
