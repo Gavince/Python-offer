@@ -12,7 +12,7 @@
 解题方法：
 方法一：构建最小堆，进行堆排序
 时间复杂度：O(NlogK)
-空间复杂度：O(K)
+空间复杂度：O(N)
 
 方法二：顺序合并
 时间复杂度：O(NKK)
@@ -27,9 +27,20 @@ O（NlogK）。
 时间复杂度：O(NKlogK)
 空间复杂度：O(logK)
 
+方法四：构建最小堆，进行堆排序
+时间复杂度：O(NlogK)
+空间复杂度：O(K)
+
 原题链接：https://leetcode-cn.com/problems/merge-k-sorted-lists/
 """
 import heapq
+from typing import List, Optional
+
+
+class ListNode:
+    def __init__(self, val=0, next=None):
+        self.val = val
+        self.next = next
 
 
 class Solution0:
@@ -54,6 +65,7 @@ class Solution0:
 
 
 class Solution１:
+
     def mergeKLists(self, lists: List[Optional[ListNode]]) -> Optional[ListNode]:
 
         tmp = None
@@ -106,5 +118,34 @@ class Solution2:
             cur = cur.next
 
         cur.next = left if left else right
+
+        return dummy.next
+
+
+class Solution3:
+
+    def mergeKLists(self, lists: List[Optional[ListNode]]) -> Optional[ListNode]:
+        # 重载运算符
+        def __lt__(a: ListNode, b: ListNode):
+            return a.val < b.val
+
+        ListNode.__lt__ = __lt__
+
+        if not lists:
+            return None
+        heap = []
+        # 优化堆存储
+        # 存储所有头结点
+        for head in lists:
+            if head:
+                heapq.heappush(heap, (head.val, head))
+        dummy = cur = ListNode(-1)
+        # 从最小堆里面进行选择当前最小
+        while heap:
+            _, head = heapq.heappop(heap)
+            cur.next = head
+            cur = cur.next
+            if head.next:
+                heapq.heappush(heap, (head.next.val, head.next))
 
         return dummy.next
