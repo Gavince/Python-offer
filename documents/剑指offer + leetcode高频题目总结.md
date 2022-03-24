@@ -661,7 +661,7 @@
 
   算法图解：
 
-  <img src="/home/gavin/Python/剑指offer/总结/imgs/双指针.png" style="zoom: 50%;" />
+  <img src="./imgs/双指针.png" style="zoom: 50%;" />
 
   ```python
   class Solution:

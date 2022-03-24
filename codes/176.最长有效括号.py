@@ -31,18 +31,18 @@ class Solution:
         if len(s) < 2: return 0
         # 定义dp并赋予初值
         # dp[i]表示到字符i的最长括号
-        dp = [0]*len(s)
+        dp = [0] * len(s)
         ans = 0
         # 状态转移
         for i in range(1, len(s)):
             if s[i] == ")":
                 # 情况1：()()()
                 if s[i - 1] == "(":
-                    dp[i] = (dp[i - 2] if i - 2 >= 0 else 0)  + 2
+                    dp[i] = (dp[i - 2] if i - 2 >= 0 else 0) + 2
                 else:
                     # 情况２：()(())
                     if i - dp[i - 1] >= 1 and s[i - dp[i - 1] - 1] == "(":
-                        dp[i] = dp[i - 1] + 2 + (dp[i - dp[i - 1] - 2]if i - dp[i - 1] >= 2 else 0)
+                        dp[i] = dp[i - 1] + 2 + (dp[i - dp[i - 1] - 2] if i - dp[i - 1] >= 2 else 0)
             ans = max(ans, dp[i])
         # 返回值
         return ans

@@ -60,6 +60,7 @@ class Sulution:
         max_left, max_right = height[0], height[n - 1]
 
         while left <= right:
+            # 直到遇见比它大的另一个数，则更新最大值的结点
             max_left = max(max_left, height[left])
             max_right = max(max_right, height[right])
             if max_left < max_right:
