@@ -12,8 +12,15 @@
 （1000000007），如计算初始结果为：1000000008，请返回 1。
 
 解题方法：
-（1）递归（有重复计算项, 时间复杂度O(2^n)）
-（2）动态规划（时间复杂度O(n), 空间复杂度O(1)）
+（1）递归（有重复计算项）
+时间复杂度：O(N^2)
+空间复杂度：O(N)
+
+（2）递归（保留重复计算项）
+时间复杂度：O(N)
+空间复杂度：O(N)
+
+（3）动态规划（时间复杂度O(n), 空间复杂度O(1)）
 状态定义：设 dp 为一维数组，其中dp[i] 的值代表斐波那契数列第 i 个数字 。
 转移方程：dp[i+1]=dp[i]+dp[i−1] ，即对应数列定义 f(n+1)=f(n)+f(n−1) ；
 初始状态：dp[0]=0, dp[1] = 1 ，即初始化前两个数字；
@@ -42,52 +49,47 @@ class Solution:
 
     def fibonacci(self, n):
         """递归算法(时间复杂度极高O(n)=２^n)"""
-        if n == 0:
-            return 0
-
         if n == 1 or n == 2:
             return 1
 
-        if n > 2:
-            return self.fibonacci(n - 1) + self.fibonacci(n - 2)
+        return self.fibonacci(n - 1) + self.fibonacci(n - 2)
 
-    def fibonacci1(self, n):
-        """动态规划问题"""
+    def fib0(self, n: int) -> int:
+        """记忆花递归"""
+        memo = [-1] * (n + 1)
 
-        if n == 0:
-            return 0
-        if n == 1:
-            return 1
-        if n > 1:
-            a = 1  # 较大值
-            b = 0  # 较小值
-            ret = 0
-            for i in range(2, n + 1):  # 左闭右开
-                ret = a + b
-                b = a
-                a = ret
+        def dfs(n):
+            if n == 0: return 0
+            if n == 1: return 1
+            if memo[n] == -1:
+                memo[n] = dfs(n - 1) + dfs(n - 2)
+            return memo[n]
 
-            return ret
+        return dfs(n) % 1000000007
 
-    def fibonacci2(self, n):
-        """列表写法O(n)=n"""
+    def fib1(self, n: int) -> int:
+        """动态规划"""
 
-        if n == 0:
-            return 0
-        if n == 1:
-            return 1
-        result = [0, 1]
+        if n == 0: return 0
+        if n == 1: return 1
+        # 定义转态
+        dp = [0] * (n + 1)
+        # 初始化转态
+        dp[0], dp[1] = 0, 1
+        # 转态转移
         for i in range(2, n + 1):
-            result.append(result[i - 1] + result[i - 2])
+            dp[i] = dp[i - 1] + dp[i - 2]
+        # 返回值
+        return dp[n] % 1000000007
 
-        return result[-1]
-
-    def fib(self, n: int) -> int:
+    def fib2(self, n: int) -> int:
+        """优化的动态规划"""
 
         a, b = 0, 1
         for _ in range(n):
             a, b = b, (a + b) % 1000000007
         return a
+
 
 if __name__ == "__main__":
     obj = Solution()

@@ -33,7 +33,7 @@
 
 
 class Solution:
-    def trailingZeroes(self, n: int) -> int:
+    def trailingZeroes0(self, n: int) -> int:
 
         zero_cnts = 0
 
@@ -44,3 +44,11 @@ class Solution:
                 current //= 5
 
         return zero_cnts
+
+    def trailingZeroes1(self, n: int) -> int:
+
+        cnt = 0
+        while n:
+            cnt += n//5
+            n = n // 5
+        return cnt

@@ -13,9 +13,11 @@
 
 解题方法：
 双指针
-时间复杂度：O(N)
-空间复杂度：O(N)
+左规则：当 ratings[i−1]<ratings[i] 时，i 号学生的糖果数量将比 i - 1 号孩子的糖果数量多。
+右规则：当 ratings[i]>ratings[i+1] 时，i 号学生的糖果数量将比 i + 1 号孩子的糖果数量多。
 
+空间复杂度：O(N)
+时间复杂度：O(N)
 原题链接：https://leetcode-cn.com/problems/candy/
 """
 
