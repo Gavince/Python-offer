@@ -20,21 +20,25 @@ DFS
 
 
 class Solution:
-    def maxProduct(self, root: TreeNode) -> int:
+    def maxProduct(self, root: Optional[TreeNode]) -> int:
 
-        # 记录各个结点的node_sum
-        list_sum = []
+        # 记录内部结点的当前和
+        node_sum = []
 
         def dfs(root):
             if root is None: return 0
-            cur_node_sum = dfs(root.left) + dfs(root.right) + root.val
-            list_sum.append(cur_node_sum)
+            left_val = dfs(root.left)
+            right_val = dfs(root.right)
+            cur_val = left_val + right_val + root.val
+            node_sum.append(cur_val)
 
-            return cur_node_sum
+            return cur_val
 
+        # 统计当前树结点之和
         total_sum = dfs(root)
-        ans = float("-inf")
-        for sum_ in list_sum:
-            ans = max(ans, sum_ * (total_sum - sum_))
+        # 计算最大乘积
+        max_ans = float("-inf")
+        for val in node_sum:
+            max_ans = max(max_ans, (total_sum - val) * val)
 
-        return ans % (10 ** 9 + 7)
+        return max_ans % (10 ** 9 + 7)
