@@ -22,7 +22,7 @@ ans.val = 3, ans.next.val = 4, ans.next.next.val = 5, 以
 时间复杂度：O(N)
 空间复杂度：O(1)
 
-原题链接：https://leetcode-cn.com/problems/middle-of-the-linked-list/solution/
+原题链接：https://leetcode-cn.com/problems/middle-of-the-linked-list/
 """
 
 

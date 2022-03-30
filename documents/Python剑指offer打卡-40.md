@@ -283,5 +283,3 @@
   
           return not numCourses
   ```
-
-## 

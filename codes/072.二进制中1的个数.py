@@ -15,7 +15,7 @@
 空间复杂度：O(1)
 
 原题链接：https://leetcode-cn.com/problems/er-jin-zhi-zhong-1de-ge-shu-lcof/
-
+原题链接：https://leetcode-cn.com/problems/number-of-1-bits/submissions/
 """
 
 class Solution:
