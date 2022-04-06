@@ -16,15 +16,25 @@
 空间复杂度：O(1)
 
 原题链接：https://leetcode-cn.com/problems/add-strings/
+相似题目（二进制的加法）：https://leetcode-cn.com/problems/JFETK5/
+相似题目（两数相加）：https://leetcode-cn.com/problems/add-two-numbers/
 """
 
 
+class ListNode:
+
+    def __init__(self, val=0, next=None):
+            self.val = val
+            self.next = next
+
+
 class Solution:
+
     def addStrings(self, num1: str, num2: str) -> str:
         res = ""
         carry = 0
         i, j = len(num1) - 1, len(num2) - 1
-        
+
         while i >= 0 or j >= 0:
             n1 = int(num1[i]) if i >= 0 else 0
             n2 = int(num2[j]) if j >= 0 else 0
@@ -36,3 +46,36 @@ class Solution:
             j -= 1
 
         return "1" + res if carry else res
+
+    def addBinary(self, a: str, b: str) -> str:
+
+        i, j = len(a) - 1, len(b) - 1
+        carry = 0
+        res = ""
+        while i >= 0 or j >= 0:
+            x = int(a[i]) if i >= 0 else 0
+            y = int(b[j]) if j >= 0 else 0
+            cur_val = x + y + carry
+            carry = cur_val // 2
+            res = str(cur_val % 2) + res
+            i -= 1
+            j -= 1
+
+        return "1" + res if carry else res
+
+    def addTwoNumbers(self, l1: ListNode, l2: ListNode) -> ListNode:
+
+        dummy = cur = ListNode()
+        carry = 0
+        while l1 or l2:
+            x = l1.val if l1 else 0
+            y = l2.val if l2 else 0
+            cur_sum = x + y + carry
+            cur.next = ListNode(cur_sum % 10)
+            cur = cur.next
+            carry = cur_sum // 10
+            if l1: l1 = l1.next
+            if l2: l2 = l2.next
+        cur.next = ListNode(carry) if carry else None
+
+        return dummy.next
