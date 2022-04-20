@@ -24,6 +24,7 @@
 2.若不存在，则需要输出０(摩尔投票法需要加入验证环节)
 
 原题链接：https://leetcode-cn.com/problems/shu-zu-zhong-chu-xian-ci-shu-chao-guo-yi-ban-de-shu-zi-lcof/
+相似题目（多数元素）：https://leetcode-cn.com/problems/majority-element/
 """
 
 

@@ -16,7 +16,6 @@ slow：慢指针实现对偶数位置进行表示
 时间复杂度：O(N)
 空间复杂度：O(1)
 """
-from typing import List
 
 
 class Solution:
